@@ -1,13 +1,48 @@
 const express = require('express');
 const Joi = require('joi');
-const fs = require('fs');
 const router = express.Router();
 let {addQuestion} = require('../queries/questions');
 let {questions} = require('../queries/questions');
+let {downvotes} = require('../queries/questions');
+let {upvotes} = require('../queries/questions');
 router.get('/', (req, res)=> {
     res.json({
-        message: 'WELCOME TO QUESTIONS'
+        message: 'WELCOME TO QUESTIONER'
     })
+});
+router.patch('/:id/downvote', (req, res)=> {
+    const arrIndex = questions.findIndex(q => q.id === parseInt(req.params.id));
+    const question = questions.find(q => q.id === parseInt(req.params.id));
+    if(!question) res.status(404).send({ "status":404, "error":"Question ID was not found"});
+    questions[arrIndex].votes--;
+        downvotes(questions);
+        let response = {
+            "status" : 200,
+            "data" : [{
+                "meetup": question.meetup,
+                "title": question.title,
+                "body": question.body,
+                "votes": question.votes
+            }]
+        };
+        res.send(response);
+});
+router.patch('/:id/upvote', (req, res)=> {
+    const arrIndex = questions.findIndex(q => q.id === parseInt(req.params.id));
+    const question = questions.find(q => q.id === parseInt(req.params.id));
+    if(!question) res.status(404).send({ "status":404, "error":"Question ID was not found"});
+    questions[arrIndex].votes++;
+        upvotes(questions);
+        let response = {
+            "status" : 200,
+            "data" : [{
+                "meetup": question.meetup,
+                "title": question.title,
+                "body": question.body,
+                "votes": question.votes
+            }]
+        };
+        res.send(response);
 });
 router.post('/', (req, res) => {
     const { error } = validateQuestion(req.body);
@@ -21,7 +56,7 @@ router.post('/', (req, res) => {
         body: req.body.body,
         votes: 0
     };
-
+    console.log(question);
     questions.push(question);
     if(questions != "")
     {
@@ -38,7 +73,6 @@ router.post('/', (req, res) => {
         res.send(response);
     }
 });
-
 function validateQuestion(question) {
     const schema = {
         createdBy: Joi.number().required(),
