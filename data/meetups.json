@@ -94,5 +94,501 @@
       "andela",
       "music"
     ]
+  },
+  {
+    "id": 7,
+    "createdOn": "2019-01-12 18:19:43",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 8,
+    "createdOn": "2019-01-12 18:21:20",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 9,
+    "createdOn": "2019-01-12 18:21:40",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 10,
+    "createdOn": "2019-01-12 18:21:57",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 11,
+    "createdOn": "2019-01-12 18:22:26",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 12,
+    "createdOn": "2019-01-12 18:23:28",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 13,
+    "createdOn": "2019-01-12 18:23:43",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 14,
+    "createdOn": "2019-01-12 18:24:52",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 15,
+    "createdOn": "2019-01-12 18:25:08",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 16,
+    "createdOn": "2019-01-12 18:30:33",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 17,
+    "createdOn": "2019-01-12 18:33:14",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 18,
+    "createdOn": "2019-01-12 18:52:58",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 19,
+    "createdOn": "2019-01-12 18:55:26",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 20,
+    "createdOn": "2019-01-12 19:02:49",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 21,
+    "createdOn": "2019-01-12 19:05:06",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 22,
+    "createdOn": "2019-01-12 19:05:44",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 23,
+    "createdOn": "2019-01-12 19:06:20",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 24,
+    "createdOn": "2019-01-12 19:09:30",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 25,
+    "createdOn": "2019-01-12 19:15:26",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 26,
+    "createdOn": "2019-01-12 19:17:24",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 27,
+    "createdOn": "2019-01-12 19:18:15",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 28,
+    "createdOn": "2019-01-12 19:21:38",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 29,
+    "createdOn": "2019-01-12 19:23:05",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 30,
+    "createdOn": "2019-01-12 19:26:03",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 31,
+    "createdOn": "2019-01-13 18:13:47",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 32,
+    "createdOn": "2019-01-13 18:16:21",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 33,
+    "createdOn": "2019-01-13 18:27:17",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 34,
+    "createdOn": "2019-01-13 18:28:13",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 35,
+    "createdOn": "2019-01-13 18:30:23",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 36,
+    "createdOn": "2019-01-13 18:30:40",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 37,
+    "createdOn": "2019-01-13 18:42:07",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
   }
 ]

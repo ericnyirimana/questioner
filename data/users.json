@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "firstname": "Erick",
+    "lastname": "Nyirimana",
+    "othername": "Guigui",
+    "email": "ericnyirimana31@gmail.com",
+    "phoneNumber": "0781575931",
+    "username": "ericnyrmn",
+    "password": "123890123",
+    "registered": "2019-01-09 08:03:03",
+    "isAdmin": "xxxxxxxxxx"
+  }
+]
