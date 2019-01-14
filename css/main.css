@@ -284,6 +284,10 @@ color: #ffffff;
 {
 	color: #fff;
 }
+.vote-icon
+{
+ width: 4%;
+}
 /*MEDIA QUERY*/
 @media only screen and (max-width : 640px) {
 
