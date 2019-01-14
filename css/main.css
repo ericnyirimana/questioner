@@ -31,12 +31,14 @@ img {
     padding: 200px;
     background-size: cover;
     width: 952px;
+    height: 75px;
     background-image: url(../img/featured-image.png);
     margin-left: -11px;
 }
 .featured-image h1
 {
-	color: #ff5823;
+	font-weight: 100;
+	color: #ffffff;
 }
 header {
 
@@ -144,7 +146,7 @@ p {
 	width: 14px;
 }
 
-button
+.tags
 {
 	border: 1px;
 	cursor: pointer;
@@ -154,15 +156,134 @@ button
 	margin-left: -44px;
 }
 .footer {
-  right: 0;
-  left: 0;
-  padding: 1rem;
   background-color: #18254f;
   text-align: center;
-  position: absolute;
   color: #ffffff;
+  clear: both;
+  position: relative;
+  height: 40px;
+  margin-top: -30px;
+}
+.search-input
+{
+  width: 283px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.button-accent
+{
+  background-color: #ff5823;
+  border: none;
+  color: white;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.meetup-header
+{
+	text-align: center;
+    font-weight: 100;
+    color: #ffffff;
+    margin-top: 39px;
+}
+.featured-content
+{
+	background: #18254fc7;
+    width: 407px;
+    padding: 16px;
+}
+.right
+{
+	float: right;
+}
+.meetup-title
+{
+	background: #18254fc7;
+    padding: 4px;
+    width: auto;
+}
+.meetup-image
+{
+height: 0px !important;
+}
+.meetup-info
+{
+color: #ffffff;
+}
+.article-image
+{
+	border-radius: 5px;
+	display:none;
+}
+.avatar
+{
+	display: block;
+    float: left;
+    position: relative;
+	width: 45px;
+	border-radius: 100px;
+    z-index: 1;
 }
 
+.btn{
+	background:#d73300ba;
+	width:125px;
+	color:white;
+	border-radius:4px;
+	border: #d73300ba 1px solid;
+	font-weight:800;
+	font-size:0.8em;
+	cursor: pointer;
+  }
+  #sidebar {
+	background-color: #18254f;
+    padding: 20px;
+    float: left;
+    width: 420px;
+    margin: 51px 24px;
+}
+#sidebar h3
+{
+	color: white;
+}
+.meetup-section {
+
+	margin: 50px 0px 40px;
+    max-width: 763px;
+    padding: 20px;
+    background-color: #ededed;
+    float: left;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.20), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+}
+.upcomimg-event ul li
+{
+	display: block !important;
+	float: none !important;
+	border-bottom: 1px #fff solid;
+}
+.upcomimg-event ul li
+{
+	display: block !important;
+	float: none !important;
+	border-bottom: 1px #fff solid;
+}
+.upcomimg-event ul a:hover li
+{
+	background-color: #fff;
+	color: #ff5823;
+}
+.upcomimg-event ul a
+{
+	color: #fff;
+}
 /*MEDIA QUERY*/
 @media only screen and (max-width : 640px) {
 
