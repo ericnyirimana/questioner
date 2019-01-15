@@ -308,7 +308,51 @@ color: #ffffff;
 }
 .form-add-meetup
 {
-	height: 400px;
+	height: 450px;
+}
+.profile-image
+{
+	width: 20%;
+    border-radius: 100%;
+}
+.row-panel
+{
+	width: 100%;
+}
+.panel
+{
+    padding: 5px;
+	width: 290px;
+	float: left;
+	margin-left: 100px;
+	border-radius: 5px;
+}
+.panel h1
+{
+	color: #fff;
+	font-weight: 100;
+}
+.panel p
+{
+	color: #fff;
+}
+.bg-red
+{
+	background-color: #ff4343;
+}
+.bg-blue
+{
+	background-color: #3b8697;
+}
+.bg-green
+{
+	background-color: #52a34d;
+}
+.personnal-info {
+	background-color: #18254f;
+    padding: -3px;
+    width: 50%;
+    margin-left: 100px;
 }
 /*MEDIA QUERY*/
 @media only screen and (max-width : 640px) {
