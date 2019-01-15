@@ -5,10 +5,9 @@
   "scripts": {
     "start": "node ./bin/www",
     "dev": "nodemon",
-    "test": "mocha --timeout 3000 --recursive"
+    "test": "mocha ./server/test/apiTest --timeout 3000 --recursive"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
     "http-errors": "~1.6.2",

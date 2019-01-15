@@ -1,20 +1,18 @@
 const createError = require('http-errors');
 const express = require('express');
-const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 const app = express();
 
-const meetups = require('./api/meetups');
-const questions = require('./api/questions');
-const users = require('./api/users');
+const meetups = require('./server/controllers/meetups');
+const questions = require('./server/controllers/questions');
+const users = require('./server/controllers/users');
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({
   extended: false
 }));
-app.use(cookieParser());
 
 app.use('/api/v1/meetups', meetups);
 app.use('/api/v1/questions', questions);

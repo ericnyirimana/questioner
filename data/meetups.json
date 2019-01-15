@@ -590,5 +590,21 @@
       "andela",
       "music"
     ]
+  },
+  {
+    "id": 38,
+    "createdOn": "2019-01-15 19:32:27",
+    "location": "kigali",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
   }
 ]

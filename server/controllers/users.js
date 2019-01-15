@@ -3,8 +3,8 @@ const Joi = require('joi');
 const fs = require('fs');
 
 const router = express.Router();
-const { addUser } = require('../queries/users');
-const { users } = require('../queries/users');
+const { addUser } = require('../models/users');
+const { users } = require('../models/users');
 
 function validateUser(user) {
     const schema = {

@@ -70,5 +70,17 @@
     "meetup": "1",
     "user": 1,
     "response": "I will be part"
+  },
+  {
+    "id": 13,
+    "meetup": "1",
+    "user": 1,
+    "response": "I will be part"
+  },
+  {
+    "id": 14,
+    "meetup": "1",
+    "user": 1,
+    "response": "I will be part"
   }
 ]

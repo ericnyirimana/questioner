@@ -2,10 +2,10 @@ const express = require('express');
 const Joi = require('joi');
 
 const router = express.Router();
-const { addMeetup } = require('../queries/meetups');
-const { meetups } = require('../queries/meetups');
-const { addRsvp } = require('../queries/meetups');
-const { rsvps } = require('../queries/meetups');
+const { addMeetup } = require('../models/meetups');
+const { meetups } = require('../models/meetups');
+const { addRsvp } = require('../models/meetups');
+const { rsvps } = require('../models/meetups');
 
 router.get('/', (req, res) => {
     const data = []; meetups.forEach((meetup) => {

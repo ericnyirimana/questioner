@@ -4,16 +4,16 @@ const Joi = require('joi');
 const router = express.Router();
 const {
     addQuestion
-} = require('../queries/questions');
+} = require('../models/questions');
 const {
     questions
-} = require('../queries/questions');
+} = require('../models/questions');
 const {
     downvotes
-} = require('../queries/questions');
+} = require('../models/questions');
 const {
     upvotes
-} = require('../queries/questions');
+} = require('../models/questions');
 
 router.get('/', (req, res) => {
     res.json({
