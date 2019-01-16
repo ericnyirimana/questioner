@@ -1,4 +1,3 @@
-
 body { 
 	font-size: 1.05em;
 	line-height: 1.25em;
@@ -6,6 +5,9 @@ body {
 	background: #ff5823d9;
 	color: #555;
 	position: relative;
+	margin: 0;
+    width: 100%;
+    padding: 0;
 }
 
 a {
@@ -28,12 +30,10 @@ img {
 
 }
 .featured-image {
-    padding: 200px;
-    background-size: cover;
-    width: 952px;
-    height: 75px;
+	background-size: cover;
+    width: 100%;
+    height: 389px;
     background-image: url(../img/featured-image.png);
-    margin-left: -11px;
 }
 .featured-image h1
 {
@@ -207,8 +207,9 @@ p {
 .meetup-title
 {
 	background: #18254fc7;
-    padding: 4px;
+    margin-top: 144px;
     width: auto;
+    width: 25%;
 }
 .meetup-image
 {
@@ -312,8 +313,9 @@ color: #ffffff;
 }
 .profile-image
 {
-	width: 20%;
+	width: 13%;
     border-radius: 100%;
+    margin: 114px;
 }
 .row-panel
 {
@@ -349,10 +351,22 @@ color: #ffffff;
 	background-color: #52a34d;
 }
 .personnal-info {
-	background-color: #18254f;
+    background-color: #18254f;
     padding: -3px;
     width: 50%;
-    margin-left: 100px;
+    margin: 10px 100px;
+	padding: 26px;
+}
+.personnal-info h3
+{
+	text-align: center;
+	color: #ffffff;
+	font-weight: 100;
+}
+table tr td{
+	color: #ffffff;
+    width: 200px;
+    border-bottom: 1px #ffffff solid;
 }
 /*MEDIA QUERY*/
 @media only screen and (max-width : 640px) {
@@ -393,8 +407,6 @@ color: #ffffff;
 	}
 
 	nav:hover ul {
-
 		display: block;
-
 	}
 }
