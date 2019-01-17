@@ -11,6 +11,7 @@ router.get('/', (req, res) => {
     const data = []; meetups.forEach((meetup) => {
 delete meetup['createdOn'];
 delete meetup['images'];
+delete meetup['description'];
 data.push(meetup);
 });
 const response = { status: 200, data };
@@ -27,6 +28,7 @@ router.get('/upcoming', (req, res) => {
         if (new Date(meetup.happeningOn) >= new Date()) {
             delete meetup['createdOn'];
             delete meetup['images'];
+            delete meetup['description'];
             data.push(meetup);
         }
     });
@@ -46,7 +48,6 @@ router.get('/:id', (req, res) => {
         data: [{
             id: meetup.id,
             topic: meetup.topic,
-            description: meetup.description,
             location: meetup.location,
             happeningOn: meetup.happeningOn,
             tags: meetup.tags
@@ -94,7 +95,6 @@ error: error.details[0].message
             status: 200,
             data: [{
                 topic: req.body.topic,
-                description: req.body.description,
                 location: req.body.location,
                 happeningOn: req.body.happeningOn,
                 tags: req.body.tags
