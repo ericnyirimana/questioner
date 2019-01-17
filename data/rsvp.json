@@ -94,5 +94,23 @@
     "meetup": "1",
     "user": 1,
     "response": "I will be part"
+  },
+  {
+    "id": 17,
+    "meetup": "1",
+    "user": 1,
+    "response": "I will be part"
+  },
+  {
+    "id": 18,
+    "meetup": "1",
+    "user": 1,
+    "response": "I will be part"
+  },
+  {
+    "id": 19,
+    "meetup": "1",
+    "user": 1,
+    "response": "I will be part"
   }
 ]

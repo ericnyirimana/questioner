@@ -106,7 +106,6 @@ error: error.details[0].message
 
 function validateRsvp(rsvp) {
     const schema = {
-        meetup: Joi.number().required(),
         user: Joi.number().required(),
         response: Joi.string().required()
     };

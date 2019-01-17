@@ -20,6 +20,7 @@
     "no-plusplus":"off",
     "import/no-dynamic-require":"off",
     "global-require":"off",
-    "prefer-destructuring":"off"
+    "prefer-destructuring":"off",
+    "no-console":"off"
   }
 }
