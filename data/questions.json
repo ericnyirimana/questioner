@@ -151,5 +151,32 @@
     "title": "testing",
     "body": "test test tes",
     "votes": 0
+  },
+  {
+    "id": 18,
+    "createdOn": "2019-01-17 14:07:01",
+    "createdBy": 1,
+    "meetup": 1,
+    "title": "testing",
+    "body": "test test tes",
+    "votes": 0
+  },
+  {
+    "id": 19,
+    "createdOn": "2019-01-17 14:08:20",
+    "createdBy": 1,
+    "meetup": 1,
+    "title": "testing",
+    "body": "test test tes",
+    "votes": 0
+  },
+  {
+    "id": 20,
+    "createdOn": "2019-01-17 14:11:53",
+    "createdBy": 1,
+    "meetup": 1,
+    "title": "testing",
+    "body": "test test tes",
+    "votes": 0
   }
 ]
