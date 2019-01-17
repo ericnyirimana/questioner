@@ -23,7 +23,6 @@ const meetupTest = {
 };
 
 const rsvpTest = {
-  meetup: 1,
   user: 1,
   response: 'I will be part'
 };
