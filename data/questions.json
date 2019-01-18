@@ -178,5 +178,41 @@
     "title": "testing",
     "body": "test test tes",
     "votes": 0
+  },
+  {
+    "id": 21,
+    "createdOn": "2019-01-17 22:38:21",
+    "createdBy": 1,
+    "meetup": 1,
+    "title": "testing",
+    "body": "test test tes",
+    "votes": 0
+  },
+  {
+    "id": 22,
+    "createdOn": "2019-01-17 22:38:51",
+    "createdBy": 1,
+    "meetup": 1,
+    "title": "testing",
+    "body": "test test tes",
+    "votes": 0
+  },
+  {
+    "id": 23,
+    "createdOn": "2019-01-17 22:44:41",
+    "createdBy": 1,
+    "meetup": 1,
+    "title": "testing",
+    "body": "test test tes",
+    "votes": 0
+  },
+  {
+    "id": 24,
+    "createdOn": "2019-01-17 23:00:19",
+    "createdBy": 1,
+    "meetup": 1,
+    "title": "testing",
+    "body": "test test tes",
+    "votes": 0
   }
 ]
