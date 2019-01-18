@@ -214,5 +214,14 @@
     "title": "testing",
     "body": "test test tes",
     "votes": 0
+  },
+  {
+    "id": 25,
+    "createdOn": "2019-01-18 07:24:39",
+    "createdBy": 1,
+    "meetup": 1,
+    "title": "testing",
+    "body": "test test tes",
+    "votes": 0
   }
 ]
