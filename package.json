@@ -1,13 +1,12 @@
 {
-  "name": "crud-stickers",
+  "name": "questioner-app",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www",
-    "test": "nyc --reporter=text --reporter=lcov mocha --timeout 25000 ./server/test/apiTest --exit || true",
-    "cover": "set NODE_ENV=test&& istanbul cover ./node_modules/mocha/bin/_mocha -- --timeout 15000 ./server/test/apiTest",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+    "test": "nyc mocha ./server/test/apiTest --exit",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
@@ -26,6 +25,7 @@
     "@babel/preset-env": "^7.2.3",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "coveralls": "^3.0.2",
     "eslint": "^5.12.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^3.3.0",
@@ -34,5 +34,17 @@
     "istanbul": "^0.4.5",
     "nodemon": "^1.18.9",
     "nyc": "^13.1.0"
-  }
+  },
+  "description": "[![Build Status](https://travis-ci.org/ericnyirimana/questioner.svg?branch=develop)](https://travis-ci.org/ericnyirimana/questioner)    [![Maintainability](https://api.codeclimate.com/v1/badges/92a47f596a3f750e2779/maintainability)](https://codeclimate.com/github/ericnyirimana/questioner/maintainability)\r [![Coverage Status](https://coveralls.io/repos/github/ericnyirimana/questioner/badge.svg)](https://coveralls.io/github/ericnyirimana/questioner)",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericnyirimana/questioner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ericnyirimana/questioner/issues"
+  },
+  "homepage": "https://github.com/ericnyirimana/questioner#readme"
 }
