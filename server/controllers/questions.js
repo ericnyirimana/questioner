@@ -1,20 +1,10 @@
-const express = require('express');
-const Joi = require('joi');
+import express from 'express';
+import Joi from 'joi';
+import {
+addQuestion, questions, downvotes, upvotes
+} from '../models/questions';
 
 const router = express.Router();
-const {
-    addQuestion
-} = require('../models/questions');
-const {
-    questions
-} = require('../models/questions');
-const {
-    downvotes
-} = require('../models/questions');
-const {
-    upvotes
-} = require('../models/questions');
-
 router.get('/', (req, res) => {
     res.json({
         message: 'WELCOME TO QUESTIONER'

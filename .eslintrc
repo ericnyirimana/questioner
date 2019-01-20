@@ -21,6 +21,7 @@
     "import/no-dynamic-require":"off",
     "global-require":"off",
     "prefer-destructuring":"off",
-    "no-console":"off"
+    "no-console":"off",
+    "import/no-mutable-exports":"off"
   }
 }

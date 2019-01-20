@@ -1,9 +1,9 @@
-const fs = require('fs');
+import fs from 'fs';
+import questiondata from '../../data/questions.json';
 // GET QUESTION LIST
 let questionsList = [];
-const questiondata = '../../data/questions.json';
 try {
-    questionsList = require(questiondata);
+    questionsList = [questiondata];
 } catch (err) {
     questionsList = [];
 }
@@ -25,10 +25,6 @@ function upvotes(data) {
         if (err) throw err;
     });
 }
-module.exports = {
-    addQuestion,
-    downvotes,
-    upvotes,
-    questions: questionsList
-
+export {
+addQuestion, questionsList as questions, downvotes, upvotes
 };
