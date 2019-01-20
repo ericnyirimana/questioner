@@ -1,11 +1,10 @@
-const express = require('express');
-const Joi = require('joi');
-const fs = require('fs');
+import express from 'express';
+import Joi from 'joi';
+import {
+addUser, users
+} from '../models/users';
 
 const router = express.Router();
-const { addUser } = require('../models/users');
-const { users } = require('../models/users');
-
 function validateUser(user) {
     const schema = {
         firstname: Joi.string().min(5).required(),
@@ -22,7 +21,7 @@ function validateUser(user) {
 }
 router.post('/', (req, res) => {
     // Validate Data
-    const { error } = validateUser(req.body);
+const { error } = validateUser(req.body);
     if (error) return res.status(400).send({ status: 400, error: error.details[0].message });
     const user = {
         id: users.length + 1,
@@ -51,8 +50,8 @@ phoneNumber: req.body.phoneNumber,
 username: req.body.username,
 isAdmin: req.body.isAdmin
  }]
-        };
-        res.send(response);
+};
+res.send(response);
 }
     });
 

@@ -1,14 +1,12 @@
-const express = require('express');
-const Joi = require('joi');
+import express from 'express';
+import Joi from 'joi';
+import {
+addMeetup, meetups, addRsvp, rsvps
+} from '../models/meetups';
 
 const router = express.Router();
-const { addMeetup } = require('../models/meetups');
-const { meetups } = require('../models/meetups');
-const { addRsvp } = require('../models/meetups');
-const { rsvps } = require('../models/meetups');
-
 router.get('/', (req, res) => {
-    const data = []; meetups.forEach((meetup) => {
+const data = []; meetups.forEach((meetup) => {
 delete meetup['createdOn'];
 delete meetup['images'];
 delete meetup['description'];
@@ -21,31 +19,29 @@ router.get('/upcoming', (req, res) => {
     meetups.sort(function (a, b) {
         return new Date(a.happeningOn) - new Date(b.happeningOn);
     });
-
-
-    const data = [];
-    meetups.forEach((meetup) => {
-        if (new Date(meetup.happeningOn) >= new Date()) {
-            delete meetup['createdOn'];
-            delete meetup['images'];
-            delete meetup['description'];
-            data.push(meetup);
-        }
-    });
-    const response = { status: 200, data };
-    res.send(response);
+const data = [];
+meetups.forEach((meetup) => {
+if (new Date(meetup.happeningOn) >= new Date()) {
+delete meetup['createdOn'];
+delete meetup['images'];
+delete meetup['description'];
+data.push(meetup);
+}
+});
+const response = { status: 200, data };
+res.send(response);
 });
 router.get('/:id', (req, res) => {
-    const meetup = meetups.find(m => m.id === parseInt(req.params.id));
-    if (!meetup) {
-         return res.status(404).send({
-        status: 404,
-        error: 'Meetup ID was not found'
-    });
+const meetup = meetups.find(m => m.id === parseInt(req.params.id));
+if (!meetup) {
+return res.status(404).send({
+status: 404,
+error: 'Meetup ID was not found'
+});
 }
-    const response = {
-        status: 200,
-        data: [{
+const response = {
+status: 200,
+    data: [{
             id: meetup.id,
             topic: meetup.topic,
             location: meetup.location,
@@ -77,18 +73,17 @@ status: 400,
 error: error.details[0].message
     });
 }
-    const meetup = {
-        id: meetups.length + 1,
-        createdOn: new Date().toISOString().replace('T', ' ').replace(/\..*$/, ''),
-        location: req.body.location,
-        images: req.body.images,
-        topic: req.body.topic,
-        description: req.body.description,
-        happeningOn: req.body.happeningOn,
-        tags: req.body.tags,
-    };
-
-    meetups.push(meetup);
+const meetup = {
+    id: meetups.length + 1,
+    createdOn: new Date().toISOString().replace('T', ' ').replace(/\..*$/, ''),
+    location: req.body.location,
+    images: req.body.images,
+    topic: req.body.topic,
+    description: req.body.description,
+    happeningOn: req.body.happeningOn,
+    tags: req.body.tags,
+};
+meetups.push(meetup);
     if (meetups !== '') {
         addMeetup(meetups);
         const response = {

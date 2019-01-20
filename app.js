@@ -1,12 +1,11 @@
-const createError = require('http-errors');
-const express = require('express');
-const logger = require('morgan');
+import createError from 'http-errors';
+import express from 'express';
+import logger from 'morgan';
+import meetups from './server/controllers/meetups';
+import questions from './server/controllers/questions';
+import users from './server/controllers/users';
 
 const app = express();
-
-const meetups = require('./server/controllers/meetups');
-const questions = require('./server/controllers/questions');
-const users = require('./server/controllers/users');
 
 app.use(logger('dev'));
 app.use(express.json());

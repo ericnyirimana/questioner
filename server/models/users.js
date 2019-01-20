@@ -1,9 +1,9 @@
-const fs = require('fs');
+import fs from 'fs';
+import userData from '../../data/users.json';
 // GET users LIST
 let userList = [];
-const userData = '././data/users.json';
 try {
-    userList = require(userData);
+    userList = userData;
 } catch (err) {
     userList = [];
 }
@@ -15,7 +15,6 @@ function addUser(data) {
     });
 }
 
-module.exports = {
-    addUser,
-    users: userList
+export {
+addUser, userList as users
 };

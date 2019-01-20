@@ -1,16 +1,16 @@
-const fs = require('fs');
+import fs from 'fs';
+import rsvpData from '../../data/rsvp.json';
+import meetupdata from '../../data/meetups.json';
 // GET MEETUP LIST
 let meetupsList = [];
-const meetupdata = '../../data/meetups.json';
 try {
-    meetupsList = require(meetupdata);
+    meetupsList = meetupdata;
 } catch (err) {
     meetupsList = [];
 }
 let rsvpsList = [];
-const rsvpData = '../../data/rsvp.json';
 try {
-    rsvpsList = require(rsvpData);
+    rsvpsList = rsvpData;
 } catch (err) {
     rsvpsList = [];
 }
@@ -28,10 +28,6 @@ function addRsvp(data) {
     });
 }
 //
-module.exports = {
-    addMeetup,
-    meetups: meetupsList,
-    addRsvp,
-    rsvps: rsvpsList,
-
+export {
+addMeetup, meetupsList as meetups, addRsvp, rsvpsList as rsvps
 };
