@@ -1,16 +1,26 @@
-import express from 'express';
 import Joi from 'joi';
 import {
 addQuestion, questions, downvotes, upvotes
 } from '../models/questions';
 
-const router = express.Router();
-router.get('/', (req, res) => {
+function validateQuestion(question) {
+    const schema = {
+        createdBy: Joi.number().required(),
+        meetup: Joi.number().required(),
+        title: Joi.string().min(5).required(),
+        body: Joi.string().min(10).required()
+    };
+    return Joi.validate(question, schema);
+}
+
+class questionController {
+static welcome_message(req, res) {
     res.json({
         message: 'WELCOME TO QUESTIONER'
     });
-});
-router.patch('/:id/downvote', (req, res) => {
+}
+
+static downvote_question(req, res) {
     const arrIndex = questions.findIndex(q => q.id === parseInt(req.params.id));
     const question = questions.find(q => q.id === parseInt(req.params.id));
     if (!question) {
@@ -31,8 +41,9 @@ router.patch('/:id/downvote', (req, res) => {
         }]
     };
     res.send(response);
-});
-router.patch('/:id/upvote', (req, res) => {
+}
+
+static upvote_question(req, res) {
     const arrIndex = questions.findIndex(q => q.id === parseInt(req.params.id));
     const question = questions.find(q => q.id === parseInt(req.params.id));
     if (!question) {
@@ -53,18 +64,9 @@ router.patch('/:id/upvote', (req, res) => {
         }]
     };
     res.send(response);
-});
-
-function validateQuestion(question) {
-    const schema = {
-        createdBy: Joi.number().required(),
-        meetup: Joi.number().required(),
-        title: Joi.string().min(5).required(),
-        body: Joi.string().min(10).required()
-    };
-    return Joi.validate(question, schema);
 }
-router.post('/', (req, res) => {
+
+static post_question(req, res) {
     const {
         error
     } = validateQuestion(req.body);
@@ -97,6 +99,7 @@ router.post('/', (req, res) => {
         };
         res.send(response);
     }
-});
+}
+}
 
-module.exports = router;
+export default questionController;

@@ -1,9 +1,9 @@
 import createError from 'http-errors';
 import express from 'express';
 import logger from 'morgan';
-import meetups from './server/controllers/meetups';
-import questions from './server/controllers/questions';
-import users from './server/controllers/users';
+import meetups from './server/routes/meetups';
+import questions from './server/routes/questions';
+import users from './server/routes/users';
 
 const app = express();
 

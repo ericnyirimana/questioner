@@ -22,6 +22,8 @@
     "global-require":"off",
     "prefer-destructuring":"off",
     "no-console":"off",
-    "import/no-mutable-exports":"off"
+    "import/no-mutable-exports":"off",
+    "camelcase":"off",
+    "import/prefer-default-export":"off"
   }
 }

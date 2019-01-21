@@ -1,37 +1,59 @@
-import express from 'express';
 import Joi from 'joi';
 import {
-addMeetup, meetups, addRsvp, rsvps
+    addMeetup, meetups, addRsvp, rsvps
 } from '../models/meetups';
 
-const router = express.Router();
-router.get('/', (req, res) => {
-const data = []; meetups.forEach((meetup) => {
-delete meetup['createdOn'];
-delete meetup['images'];
-delete meetup['description'];
-data.push(meetup);
-});
-const response = { status: 200, data };
-res.send(response);
-});
-router.get('/upcoming', (req, res) => {
+function validateMeetup(meetup) {
+    const schema = {
+        location: Joi.string().min(4).required(),
+        images: Joi.array().required(),
+        topic: Joi.string().min(5).required(),
+        description: Joi.string().required(),
+        happeningOn: Joi.date().required(),
+        createdOn: Joi.date(),
+        tags: Joi.array()
+    };
+    return Joi.validate(meetup, schema);
+}
+function validateRsvp(rsvp) {
+    const schema = {
+        user: Joi.number().required(),
+        response: Joi.string().required()
+    };
+    return Joi.validate(rsvp, schema);
+}
+class meetupController {
+// get meetups
+static get_meetups(req, res) {
+    const data = [];
+    meetups.forEach((meetup) => {
+    delete meetup['createdOn'];
+    delete meetup['images'];
+    delete meetup['description'];
+    data.push(meetup);
+    });
+    const response = { status: 200, data };
+    res.send(response);
+}
+
+static get_upcoming_meetups(req, res) {
     meetups.sort(function (a, b) {
         return new Date(a.happeningOn) - new Date(b.happeningOn);
     });
-const data = [];
-meetups.forEach((meetup) => {
-if (new Date(meetup.happeningOn) >= new Date()) {
-delete meetup['createdOn'];
-delete meetup['images'];
-delete meetup['description'];
-data.push(meetup);
+    const data = [];
+    meetups.forEach((meetup) => {
+    if (new Date(meetup.happeningOn) >= new Date()) {
+    delete meetup['createdOn'];
+    delete meetup['images'];
+    delete meetup['description'];
+    data.push(meetup);
+    }
+    });
+    const response = { status: 200, data };
+    res.send(response);
 }
-});
-const response = { status: 200, data };
-res.send(response);
-});
-router.get('/:id', (req, res) => {
+
+static get_specific_meetups(req, res) {
 const meetup = meetups.find(m => m.id === parseInt(req.params.id));
 if (!meetup) {
 return res.status(404).send({
@@ -50,20 +72,9 @@ status: 200,
         }]
     };
     res.send(response);
-});
-function validateMeetup(meetup) {
-    const schema = {
-        location: Joi.string().min(4).required(),
-        images: Joi.array().required(),
-        topic: Joi.string().min(5).required(),
-        description: Joi.string().required(),
-        happeningOn: Joi.date().required(),
-        createdOn: Joi.date(),
-        tags: Joi.array()
-    };
-    return Joi.validate(meetup, schema);
 }
-router.post('/', (req, res) => {
+
+static post_meetups(req, res) {
     const {
         error
     } = validateMeetup(req.body);
@@ -97,16 +108,9 @@ meetups.push(meetup);
         };
         res.send(response);
     }
-});
-
-function validateRsvp(rsvp) {
-    const schema = {
-        user: Joi.number().required(),
-        response: Joi.string().required()
-    };
-    return Joi.validate(rsvp, schema);
 }
-router.post('/:id/rsvps', (req, res) => {
+
+static post_rsvp(req, res) {
     // Validate Data
     const {
         error
@@ -143,6 +147,7 @@ router.post('/:id/rsvps', (req, res) => {
         };
         res.send(response);
     }
-});
+}
+}
 
-module.exports = router;
+export default meetupController;
