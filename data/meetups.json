@@ -78,5 +78,37 @@
       "andela",
       "music"
     ]
+  },
+  {
+    "id": 6,
+    "createdOn": "2019-01-20 22:36:11",
+    "location": "Buja",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
+  },
+  {
+    "id": 7,
+    "createdOn": "2019-01-21 21:51:56",
+    "location": "Gabon",
+    "images": [
+      "user.jpg",
+      "test.jpg"
+    ],
+    "topic": "Meetup Title",
+    "description": "Andela Test",
+    "happeningOn": "2019-01-31",
+    "tags": [
+      "andela",
+      "music"
+    ]
   }
 ]

@@ -1,10 +1,8 @@
-import express from 'express';
 import Joi from 'joi';
 import {
 addUser, users
 } from '../models/users';
 
-const router = express.Router();
 function validateUser(user) {
     const schema = {
         firstname: Joi.string().min(5).required(),
@@ -19,7 +17,8 @@ function validateUser(user) {
     };
     return Joi.validate(user, schema);
 }
-router.post('/', (req, res) => {
+class userController {
+static add_user(req, res) {
     // Validate Data
 const { error } = validateUser(req.body);
     if (error) return res.status(400).send({ status: 400, error: error.details[0].message });
@@ -53,6 +52,7 @@ isAdmin: req.body.isAdmin
 };
 res.send(response);
 }
-    });
+}
+}
 
-module.exports = router;
+export default userController;

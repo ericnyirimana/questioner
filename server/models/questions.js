@@ -3,7 +3,7 @@ import questiondata from '../../data/questions.json';
 // GET QUESTION LIST
 let questionsList = [];
 try {
-    questionsList = [questiondata];
+    questionsList = questiondata;
 } catch (err) {
     questionsList = [];
 }
