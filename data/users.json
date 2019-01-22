@@ -22,5 +22,29 @@
     "password": "123890123",
     "registered": "2019-01-21 22:45:40",
     "isAdmin": "true"
+  },
+  {
+    "id": 3,
+    "firstname": "Erick",
+    "lastname": "Nyirimana",
+    "othername": "Guigui",
+    "email": "ericnyirimana31@gmail.com",
+    "phoneNumber": "0781575931",
+    "username": "ericnyrmn",
+    "password": "123890123",
+    "registered": "2019-01-22 08:35:34",
+    "isAdmin": "true"
+  },
+  {
+    "id": 4,
+    "firstname": "Sheba",
+    "lastname": "Kigali",
+    "othername": "Guigui",
+    "email": "ericnyirimana31@gmail.com",
+    "phoneNumber": "0781575931",
+    "username": "ericnyrmn",
+    "password": "123890123",
+    "registered": "2019-01-22 08:53:31",
+    "isAdmin": "true"
   }
 ]
