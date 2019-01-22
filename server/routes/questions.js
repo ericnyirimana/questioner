@@ -9,7 +9,5 @@ router.get('/', controller.welcome_message);
 router.patch('/:id/downvote', controller.downvote_question);
 // Upvote Question
 router.patch('/:id/upvote', controller.upvote_question);
-// Post Question
-router.post('/', controller.post_question);
 
 export default router;

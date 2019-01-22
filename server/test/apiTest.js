@@ -29,7 +29,6 @@ const rsvpTest = {
 
 const questionTest = {
   createdBy: 1,
-  meetup: 1,
   title: 'testing',
   body: 'test test tes'
 };
@@ -49,7 +48,7 @@ const questionTest = {
   describe('Quesions Post on meetup Test', () => {
     it('Questions Post Succeed', (done) => {
       chai.request(server)
-        .post('/api/v1/questions')
+        .post('/api/v1/meetups/1/questions')
         .send(questionTest)
         .end((err, res) => {
           res.should.have.status(200);
