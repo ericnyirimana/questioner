@@ -16,7 +16,7 @@ static downvote_question(req, res) {
         error: 'Question ID was not found'
     });
 }
-    questions[arrIndex].votes--;
+    questions[arrIndex].downvotes++;
     downvotes(questions);
     const response = {
         status: 200,
@@ -24,7 +24,8 @@ static downvote_question(req, res) {
             meetup: question.meetup,
             title: question.title,
             body: question.body,
-            votes: question.votes
+            downvotes: question.downvotes,
+            upvotes: question.upvotes
         }]
     };
     res.send(response);
@@ -39,7 +40,7 @@ static upvote_question(req, res) {
         error: 'Question ID was not found'
     });
 }
-    questions[arrIndex].votes++;
+    questions[arrIndex].upvotes++;
     upvotes(questions);
     const response = {
         status: 200,
@@ -47,7 +48,8 @@ static upvote_question(req, res) {
             meetup: question.meetup,
             title: question.title,
             body: question.body,
-            votes: question.votes
+            downvotes: question.downvotes,
+            upvotes: question.upvotes
         }]
     };
     res.send(response);

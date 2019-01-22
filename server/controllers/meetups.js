@@ -152,7 +152,8 @@ if (!meetups.find(m => m.id === parseInt(req.params.id))) {
         meetup: req.params.id,
         title: req.body.title,
         body: req.body.body,
-        votes: 0
+        upvotes: 0,
+        downvotes: 0
     };
     questionsList.push(question);
     if (questionsList !== '') {
