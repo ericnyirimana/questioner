@@ -6,213 +6,27 @@
     "meetup": 1,
     "title": "testing",
     "body": "test test tes",
-    "votes": -2
+    "upvotes": 1,
+    "downvotes": 2
   },
   {
     "id": 2,
-    "createdOn": "2019-01-12 19:13:36",
+    "createdOn": "2019-01-22 12:11:23",
     "createdBy": 1,
-    "meetup": 1,
-    "title": "testing",
-    "body": "test test tes",
-    "votes": 0
+    "meetup": "1",
+    "title": "Question Meetup2",
+    "body": "Meetup test2",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
     "id": 3,
-    "createdOn": "2019-01-12 19:15:26",
-    "createdBy": 1,
-    "meetup": 1,
-    "title": "testing",
-    "body": "test test tes",
-    "votes": 0
-  },
-  {
-    "id": 4,
-    "createdOn": "2019-01-12 19:17:24",
-    "createdBy": 1,
-    "meetup": 1,
-    "title": "testing",
-    "body": "test test tes",
-    "votes": 0
-  },
-  {
-    "id": 5,
-    "createdOn": "2019-01-12 19:18:15",
-    "createdBy": 1,
-    "meetup": 1,
-    "title": "testing",
-    "body": "test test tes",
-    "votes": 0
-  },
-  {
-    "id": 6,
-    "createdOn": "2019-01-12 19:21:38",
-    "createdBy": 1,
-    "meetup": 1,
-    "title": "testing",
-    "body": "test test tes",
-    "votes": 0
-  },
-  {
-    "id": 7,
-    "createdOn": "2019-01-12 19:23:05",
-    "createdBy": 1,
-    "meetup": 1,
-    "title": "testing",
-    "body": "test test tes",
-    "votes": 0
-  },
-  {
-    "id": 8,
-    "createdOn": "2019-01-12 19:26:03",
-    "createdBy": 1,
-    "meetup": 1,
-    "title": "testing",
-    "body": "test test tes",
-    "votes": 0
-  },
-  {
-    "id": 9,
-    "createdOn": "2019-01-13 18:13:47",
-    "createdBy": 1,
-    "meetup": 1,
-    "title": "testing",
-    "body": "test test tes",
-    "votes": 0
-  },
-  {
-    "id": 10,
-    "createdOn": "2019-01-13 18:16:21",
-    "createdBy": 1,
-    "meetup": 1,
-    "title": "testing",
-    "body": "test test tes",
-    "votes": 0
-  },
-  {
-    "id": 11,
-    "createdOn": "2019-01-13 18:27:17",
-    "createdBy": 1,
-    "meetup": 1,
-    "title": "testing",
-    "body": "test test tes",
-    "votes": 0
-  },
-  {
-    "id": 12,
-    "createdOn": "2019-01-13 18:28:13",
-    "createdBy": 1,
-    "meetup": 1,
-    "title": "testing",
-    "body": "test test tes",
-    "votes": 0
-  },
-  {
-    "id": 13,
-    "createdOn": "2019-01-13 18:30:23",
-    "createdBy": 1,
-    "meetup": 1,
-    "title": "testing",
-    "body": "test test tes",
-    "votes": 0
-  },
-  {
-    "id": 14,
-    "createdOn": "2019-01-13 18:30:40",
-    "createdBy": 1,
-    "meetup": 1,
-    "title": "testing",
-    "body": "test test tes",
-    "votes": 0
-  },
-  {
-    "id": 15,
-    "createdOn": "2019-01-13 18:42:07",
-    "createdBy": 1,
-    "meetup": 1,
-    "title": "testing",
-    "body": "test test tes",
-    "votes": 0
-  },
-  {
-    "id": 16,
-    "createdOn": "2019-01-15 19:32:27",
-    "createdBy": 1,
-    "meetup": 1,
-    "title": "testing",
-    "body": "test test tes",
-    "votes": 0
-  },
-  {
-    "id": 17,
-    "createdOn": "2019-01-17 10:28:06",
-    "createdBy": 1,
-    "meetup": 1,
-    "title": "testing",
-    "body": "test test tes",
-    "votes": 0
-  },
-  {
-    "id": 18,
-    "createdOn": "2019-01-17 14:07:01",
-    "createdBy": 1,
-    "meetup": 1,
-    "title": "testing",
-    "body": "test test tes",
-    "votes": 0
-  },
-  {
-    "id": 19,
-    "createdOn": "2019-01-17 14:08:20",
-    "createdBy": 1,
-    "meetup": 1,
-    "title": "testing",
-    "body": "test test tes",
-    "votes": -1
-  },
-  {
-    "id": 20,
-    "createdOn": "2019-01-17 14:11:53",
-    "createdBy": 1,
-    "meetup": 1,
-    "title": "testing",
-    "body": "test test tes",
-    "votes": 0
-  },
-  {
-    "id": 21,
-    "createdOn": "2019-01-22 10:33:41",
-    "createdBy": 1,
-    "meetup": "1",
-    "title": "Question Meetup",
-    "body": "Meetup test",
-    "votes": 0
-  },
-  {
-    "id": 22,
-    "createdOn": "2019-01-22 10:40:39",
+    "createdOn": "2019-01-22 12:20:57",
     "createdBy": 1,
     "meetup": "1",
     "title": "testing",
     "body": "test test tes",
-    "votes": 0
-  },
-  {
-    "id": 23,
-    "createdOn": "2019-01-22 10:46:09",
-    "createdBy": 1,
-    "meetup": "1",
-    "title": "testing",
-    "body": "test test tes",
-    "votes": 0
-  },
-  {
-    "id": 24,
-    "createdOn": "2019-01-22 10:47:28",
-    "createdBy": 1,
-    "meetup": "1",
-    "title": "testing",
-    "body": "test test tes",
-    "votes": 0
+    "upvotes": 0,
+    "downvotes": 0
   }
 ]
