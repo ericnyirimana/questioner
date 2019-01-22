@@ -1,27 +1,10 @@
-import Joi from 'joi';
 import {
-    addMeetup, meetups, addRsvp, rsvps
+addMeetup, meetups, addRsvp, rsvps
 } from '../models/meetups';
+import {
+    validateMeetup, validateRsvp
+    } from '../helpers/meetups';
 
-function validateMeetup(meetup) {
-    const schema = {
-        location: Joi.string().min(4).required(),
-        images: Joi.array().required(),
-        topic: Joi.string().min(5).required(),
-        description: Joi.string().required(),
-        happeningOn: Joi.date().required(),
-        createdOn: Joi.date(),
-        tags: Joi.array()
-    };
-    return Joi.validate(meetup, schema);
-}
-function validateRsvp(rsvp) {
-    const schema = {
-        user: Joi.number().required(),
-        response: Joi.string().required()
-    };
-    return Joi.validate(rsvp, schema);
-}
 class meetupController {
 // get meetups
 static get_meetups(req, res) {

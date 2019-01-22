@@ -1,22 +1,8 @@
-import Joi from 'joi';
 import {
 addUser, users
 } from '../models/users';
+import validateUser from '../helpers/users';
 
-function validateUser(user) {
-    const schema = {
-        firstname: Joi.string().min(5).required(),
-        lastname: Joi.string().min(5).required(),
-        othername: Joi.string(),
-        email: Joi.string().email({ minDomainAtoms: 2 }).required(),
-        phoneNumber: Joi.number().required(),
-        username: Joi.string().min(5).required(),
-        password: Joi.string().min(8).required(),
-        registered: Joi.date(),
-        isAdmin: Joi.boolean().required()
-    };
-    return Joi.validate(user, schema);
-}
 class userController {
 static add_user(req, res) {
     // Validate Data
@@ -34,7 +20,6 @@ const { error } = validateUser(req.body);
         registered: new Date().toISOString().replace('T', ' ').replace(/\..*$/, ''),
         isAdmin: req.body.isAdmin
     };
-    console.log(user);
     users.push(user);
 if (users !== '') {
 addUser(users);

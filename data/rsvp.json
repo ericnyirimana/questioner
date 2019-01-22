@@ -262,5 +262,11 @@
     "meetup": "1",
     "user": 1,
     "response": "I will be part"
+  },
+  {
+    "id": 45,
+    "meetup": "8",
+    "user": 1,
+    "response": "No"
   }
 ]
