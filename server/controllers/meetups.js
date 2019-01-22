@@ -1,9 +1,9 @@
 import {
-addMeetup, meetups, addRsvp, rsvps
+addMeetup, meetups, addRsvp, rsvps, addQuestion, questionsList
 } from '../models/meetups';
 import {
-    validateMeetup, validateRsvp
-    } from '../helpers/meetups';
+validateMeetup, validateRsvp, validateQuestion
+} from '../helpers/meetups';
 
 class meetupController {
 // get meetups
@@ -126,6 +126,44 @@ static post_rsvp(req, res) {
                 meetup: req.body.meetup,
                 topic,
                 status: req.body.response,
+            }]
+        };
+        res.send(response);
+    }
+}
+
+static post_question(req, res) {
+    const {
+        error
+    } = validateQuestion(req.body);
+    if (error) {
+        return res.status(400).send({
+        status: 400,
+        error: error.details[0].message
+    });
+}
+if (!meetups.find(m => m.id === parseInt(req.params.id))) {
+    return res.status(404).send('Meetup ID was not found');
+}
+    const question = {
+        id: questionsList.length + 1,
+        createdOn: new Date().toISOString().replace('T', ' ').replace(/\..*$/, ''),
+        createdBy: req.body.createdBy,
+        meetup: req.params.id,
+        title: req.body.title,
+        body: req.body.body,
+        votes: 0
+    };
+    questionsList.push(question);
+    if (questionsList !== '') {
+        addQuestion(questionsList);
+        const response = {
+            status: 200,
+            data: [{
+                user: req.body.createdBy,
+                meetup: req.body.meetup,
+                title: req.body.title,
+                body: req.body.body
             }]
         };
         res.send(response);

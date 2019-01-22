@@ -19,5 +19,13 @@ function validateRsvp(rsvp) {
     };
     return Joi.validate(rsvp, schema);
 }
+function validateQuestion(question) {
+    const schema = {
+        createdBy: Joi.number().required(),
+        title: Joi.string().min(5).required(),
+        body: Joi.string().min(10).required()
+    };
+    return Joi.validate(question, schema);
+}
 
-export { validateMeetup, validateRsvp };
+export { validateMeetup, validateRsvp, validateQuestion };
