@@ -123,7 +123,7 @@ static post_rsvp(req, res) {
         const response = {
             status: 200,
             data: [{
-                meetup: req.body.meetup,
+                meetup: req.params.id,
                 topic,
                 status: req.body.response,
             }]
@@ -162,7 +162,7 @@ if (!meetups.find(m => m.id === parseInt(req.params.id))) {
             status: 200,
             data: [{
                 user: req.body.createdBy,
-                meetup: req.body.meetup,
+                meetup: req.params.id,
                 title: req.body.title,
                 body: req.body.body
             }]
