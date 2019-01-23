@@ -1,41 +1,37 @@
-import {
-addUser, users
-} from '../models/users';
 import validateUser from '../helpers/users';
+import Dbcreatation from '../../db';
 
 class userController {
 static add_user(req, res) {
+const users = [];
     // Validate Data
 const { error } = validateUser(req.body);
     if (error) return res.status(400).send({ status: 400, error: error.details[0].message });
-    const user = {
-        id: users.length + 1,
-        firstname: req.body.firstname,
-        lastname: req.body.lastname,
-        othername: req.body.othername,
-        email: req.body.email,
-        phoneNumber: req.body.phoneNumber,
-        username: req.body.username,
-        password: req.body.password,
-        registered: new Date().toISOString().replace('T', ' ').replace(/\..*$/, ''),
-        isAdmin: req.body.isAdmin
-    };
-    users.push(user);
+    const user = [
+        req.body.firstname,
+        req.body.othername,
+        req.body.lastname,
+        req.body.email,
+        req.body.username,
+        req.body.phoneNumber,
+        req.body.isAdmin,
+        req.body.password
+    ];
 if (users !== '') {
-addUser(users);
-const response = {
-status: 200,
-data: [{
-firstname: req.body.firstname,
-lastname: req.body.lastname,
-othername: req.body.othername,
-email: req.body.email,
-phoneNumber: req.body.phoneNumber,
-username: req.body.username,
-isAdmin: req.body.isAdmin
- }]
-};
-res.send(response);
+const sql = `INSERT INTO users (firstname,othername,
+    lastname,email,username,phone_number,is_admin,password)
+       VALUES ($1,$2,$3,$4,$5,$6,$7,$8) RETURNING *`;
+       Dbcreatation.pool.query(sql, user)
+    .then((response) => {
+        console.log(response);
+        return res.status(201).json({
+            status: 201,
+            data: response.rows,
+          });
+    })
+    .catch((err) => {
+        console.log(err.message);
+    });
 }
 }
 }

@@ -26,7 +26,7 @@ createTables()
 {
     const users = `
     CREATE TABLE IF NOT EXISTS users (
-    id int PRIMARY KEY,
+    id serial PRIMARY KEY,
     firstname VARCHAR(30) NOT NULL,
     othername VARCHAR(30),
     lastname VARCHAR(30) NOT NULL,
@@ -44,16 +44,14 @@ createTables()
     })
     .catch((err) => {
         console.log(err.message);
-        this.pool.end();
     });
 
     const meetup = `
     CREATE TABLE IF NOT EXISTS meetups (
-    id int PRIMARY KEY,
+    id serial int PRIMARY KEY,
     createdOn TIMESTAMP,
     location VARCHAR(30) NOT NULL,
-    topic VARCHAR(120) NOT NULL,
-    
+    topic VARCHAR(120) NOT NULL,   
     description VARCHAR(120) NOT NULL,
     happeningOn DATE
         )`;
@@ -63,11 +61,10 @@ createTables()
         })
         .catch((err) => {
             console.log(err.message);
-            this.pool.end();
         });
     const question = `
     CREATE TABLE IF NOT EXISTS questions (
-    id int PRIMARY KEY,
+    id serial int PRIMARY KEY,
     createdOn TIMESTAMP,
     createdBy int NOT NULL,
     meetup_id int NOT NULL,
@@ -80,12 +77,11 @@ createTables()
         })
         .catch((err) => {
             console.log(err.message);
-            this.pool.end();
         });
     const meetup_images = `
     CREATE TABLE IF NOT EXISTS
         meetup_images(
-          id int NOT NULL PRIMARY KEY,
+          id serial NOT NULL PRIMARY KEY,
           meetup_id int NOT NULL,
           image VARCHAR(128) NOT NULL
         )`;
@@ -95,12 +91,11 @@ createTables()
         })
         .catch((err) => {
             console.log(err.message);
-            this.pool.end();
         });
     const meetup_tags = `
         CREATE TABLE IF NOT EXISTS
         meetup_tags(
-          id int NOT NULL PRIMARY KEY,
+          id serial NOT NULL PRIMARY KEY,
           meetup_id int NOT NULL,
           tag_id int NOT NULL
         )`;
@@ -110,12 +105,11 @@ createTables()
         })
         .catch((err) => {
             console.log(err.message);
-            this.pool.end();
         });
         const tags = `
         CREATE TABLE IF NOT EXISTS
         tags(
-          id int NOT NULL PRIMARY KEY,
+          id serial NOT NULL PRIMARY KEY,
           tag VARCHAR(30) NOT NULL
         )`;
         this.pool.query(tags)
@@ -124,12 +118,11 @@ createTables()
         })
         .catch((err) => {
             console.log(err.message);
-            this.pool.end();
         });
         const votes = `
         CREATE TABLE IF NOT EXISTS
         question_votes(
-          id int NOT NULL PRIMARY KEY,
+          id serial NOT NULL PRIMARY KEY,
           question_id int NOT NULL,
           user_id int NOT NULL,
           vote_status VARCHAR(30) NOT NULL
@@ -140,12 +133,11 @@ createTables()
         })
         .catch((err) => {
             console.log(err.message);
-            this.pool.end();
         });
         const rsvp = `
         CREATE TABLE IF NOT EXISTS
         rsvp(
-          id int NOT NULL PRIMARY KEY,
+          id serial NOT NULL PRIMARY KEY,
           meetup_id int NOT NULL,
           user_id int NOT NULL,
           response VARCHAR(128) NOT NULL
@@ -156,7 +148,6 @@ createTables()
         })
         .catch((err) => {
             console.log(err.message);
-            this.pool.end();
         });
 }
 }
