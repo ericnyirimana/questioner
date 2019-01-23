@@ -4,6 +4,7 @@ addMeetup, meetups, addRsvp, rsvps, addQuestion, questionsList
 import {
 validateMeetup, validateRsvp, validateQuestion
 } from '../helpers/meetups';
+import Dbcreatation from '../../db';
 
 class meetupController {
 // get meetups
