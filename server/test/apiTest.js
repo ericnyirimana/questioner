@@ -1,6 +1,6 @@
-const chai = require('chai');
-const chaiHttp = require('chai-http');
-const server = require('../../app');
+import chai from 'chai';
+import chaiHttp from 'chai-http';
+import server from '../../app';
 
 const should = chai.should();
 const expect = chai.expect;
@@ -24,7 +24,7 @@ const meetupTest = {
 
 const rsvpTest = {
   user: 1,
-  response: 'I will be part'
+  response: 'Yes'
 };
 
 const questionTest = {
@@ -41,6 +41,10 @@ const questionTest = {
         .end((err, res) => {
           res.should.have.status(200);
           expect(res.body).to.be.a('object');
+          expect(res.body.data[0].location).to.be.equal(meetupTest.location);
+          expect(res.body.data[0].happeningOn).to.be.equal(meetupTest.happeningOn);
+          expect(res.body.data[0].tags[0]).to.be.equal(meetupTest.tags[0]);
+          expect(res.body.data[0].tags[1]).to.be.equal(meetupTest.tags[1]);
           done();
         });
     });
@@ -53,6 +57,10 @@ const questionTest = {
         .end((err, res) => {
           res.should.have.status(200);
           expect(res.body).to.be.a('object');
+          expect(res.body.data[0].user).to.be.equal(questionTest.createdBy);
+          expect(res.body.data[0].meetup).to.be.equal('1');
+          expect(res.body.data[0].title).to.be.equal(questionTest.title);
+          expect(res.body.data[0].body).to.be.equal(questionTest.body);
           done();
         });
     });
@@ -65,6 +73,8 @@ const questionTest = {
         .end((err, res) => {
           res.should.have.status(200);
           expect(res.body).to.be.a('object');
+          expect(res.body.data[0].status).to.be.equal(rsvpTest.response);
+          expect(res.body.data[0].meetup).to.be.equal('1');
           done();
         });
     });
@@ -102,11 +112,21 @@ const questionTest = {
         });
     });
   });
-  describe('RVSP Meetup', () => {
-    it('Meetup Rsvp', (done) => {
+  describe('Downvotes a question', () => {
+    it('Downvotes', (done) => {
       chai.request(server)
-        .post('/api/v1/meetups/1/rsvps')
-        .send(rsvpTest)
+        .patch('/api/v1/questions/2/downvote')
+        .end((err, res) => {
+          res.should.have.status(200);
+          expect(res.body).to.be.a('object');
+          done();
+        });
+    });
+  });
+  describe('Upvote a question', () => {
+    it('Upvotes', (done) => {
+      chai.request(server)
+        .patch('/api/v1/questions/2/upvote')
         .end((err, res) => {
           res.should.have.status(200);
           expect(res.body).to.be.a('object');
