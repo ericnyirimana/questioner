@@ -11,7 +11,7 @@ router.get('/upcoming', controller.get_upcoming_meetups);
 // Get Upcoming Meetup
 router.get('/:id', controller.get_specific_meetups);
 // Post Meetup
-router.post('/', Auth.verifyToken, controller.post_meetups);
+router.post('/', controller.post_meetups);
 // Post Rsvp
 router.post('/:id/rsvps', controller.post_rsvp);
 // Post question on specific meetup
