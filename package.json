@@ -9,6 +9,11 @@
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "@babel/polyfill": "^7.2.5",
     "bcryptjs": "^2.4.3",
     "chai": "^4.2.0",
@@ -25,11 +30,6 @@
     "pg": "^7.8.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
     "codeclimate-test-reporter": "^0.5.1",
     "coveralls": "^3.0.2",
     "eslint": "^5.12.0",
