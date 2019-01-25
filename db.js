@@ -5,13 +5,17 @@ dotenv.config();
 
 class Dbcreatation {
 constructor() {
- this.pool = new Pool({
-    user: process.env.PGUSER,
-    host: process.env.PGHOST,
-    database: process.env.PGDB,
-    password: process.env.PGPASSWORD,
-    port: process.env.PGPORT
-});
+    if (process.env.DATABASE_URL) {
+        this.pool = new Pool({ connectionString: process.env.DATABASE_URL });
+    } else {
+        this.pool = new Pool({
+            user: process.env.PGUSER,
+            host: process.env.PGHOST,
+            database: process.env.PGDB,
+            password: process.env.PGPASSWORD,
+            port: process.env.PGPORT
+        });
+    }
 
 this.pool.on('connect', () => {
   console.log('connected to the db');
