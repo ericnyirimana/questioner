@@ -51,7 +51,8 @@ const { error } = validateUser(req.body);
                 console.log(data);
                 return res.status(201).json({
                     status: 201,
-                    data: [{ token }],
+                    data,
+                    token
                   });
             })
             .catch((err) => {
