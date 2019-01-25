@@ -1,1 +1,1 @@
-web: node --require babel-register app.js
+web: node --require babel-register ./bin/www
