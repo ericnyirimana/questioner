@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node --require babel-register ./bin/www",
-    "dev": "nodemon --exec babel-node --presets env ./bin/www",
+    "start": "node --require babel-register app",
+    "dev": "nodemon --exec babel-node --presets env app",
     "test": "nyc --reporter=html --reporter=text --timeout=1500 mocha --require babel-polyfill --require babel-register ./server/test/apiTest --exit",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
