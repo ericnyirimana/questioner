@@ -1,9 +1,13 @@
 import createError from 'http-errors';
 import express from 'express';
 import logger from 'morgan';
+import ENV from 'dotenv';
+
 import meetups from './server/routes/meetups';
 import questions from './server/routes/questions';
 import users from './server/routes/users';
+
+ENV.config();
 
 const app = express();
 

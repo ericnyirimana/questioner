@@ -32,7 +32,7 @@ createTables()
     lastname VARCHAR(30) NOT NULL,
     email VARCHAR(120) NOT NULL UNIQUE,
     username VARCHAR(30) NOT NULL UNIQUE,
-    phone_number CHAR(15) NOT NULL,
+    phone_number CHAR(15) NOT NULL UNIQUE,
     registered TIMESTAMP,
     is_admin BOOLEAN,
     password VARCHAR(120) NOT NULL
@@ -48,11 +48,13 @@ createTables()
 
     const meetup = `
     CREATE TABLE IF NOT EXISTS meetups (
-    id serial int PRIMARY KEY,
+    id serial PRIMARY KEY,
     createdOn TIMESTAMP,
     location VARCHAR(30) NOT NULL,
     topic VARCHAR(120) NOT NULL,   
     description VARCHAR(120) NOT NULL,
+    image text[] NOT NULL,
+    tag text[] NOT NULL,
     happeningOn DATE
         )`;
         this.pool.query(meetup)
@@ -64,55 +66,16 @@ createTables()
         });
     const question = `
     CREATE TABLE IF NOT EXISTS questions (
-    id serial int PRIMARY KEY,
+    id serial PRIMARY KEY,
     createdOn TIMESTAMP,
-    createdBy int NOT NULL,
-    meetup_id int NOT NULL,
+    createdBy INT NOT NULL REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    meetup_id INT NOT NULL REFERENCES meetups(id) ON DELETE CASCADE ON UPDATE CASCADE,
     title VARCHAR(120) NOT NULL,
-    body VARCHAR(120) NOT NULL
+    body VARCHAR(120) NOT NULL,
+    downvotes int NOT NULL,
+    upvotes int NOT NULL
         )`;
         this.pool.query(question)
-        .then((response) => {
-            console.log(response);
-        })
-        .catch((err) => {
-            console.log(err.message);
-        });
-    const meetup_images = `
-    CREATE TABLE IF NOT EXISTS
-        meetup_images(
-          id serial NOT NULL PRIMARY KEY,
-          meetup_id int NOT NULL,
-          image VARCHAR(128) NOT NULL
-        )`;
-        this.pool.query(meetup_images)
-        .then((response) => {
-            console.log(response);
-        })
-        .catch((err) => {
-            console.log(err.message);
-        });
-    const meetup_tags = `
-        CREATE TABLE IF NOT EXISTS
-        meetup_tags(
-          id serial NOT NULL PRIMARY KEY,
-          meetup_id int NOT NULL,
-          tag_id int NOT NULL
-        )`;
-        this.pool.query(meetup_tags)
-        .then((response) => {
-            console.log(response);
-        })
-        .catch((err) => {
-            console.log(err.message);
-        });
-        const tags = `
-        CREATE TABLE IF NOT EXISTS
-        tags(
-          id serial NOT NULL PRIMARY KEY,
-          tag VARCHAR(30) NOT NULL
-        )`;
-        this.pool.query(tags)
         .then((response) => {
             console.log(response);
         })
@@ -123,8 +86,8 @@ createTables()
         CREATE TABLE IF NOT EXISTS
         question_votes(
           id serial NOT NULL PRIMARY KEY,
-          question_id int NOT NULL,
-          user_id int NOT NULL,
+          question_id INT NOT NULL REFERENCES questions(id) ON DELETE CASCADE ON UPDATE CASCADE,
+          user_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE,
           vote_status VARCHAR(30) NOT NULL
         )`;
         this.pool.query(votes)
@@ -138,11 +101,27 @@ createTables()
         CREATE TABLE IF NOT EXISTS
         rsvp(
           id serial NOT NULL PRIMARY KEY,
-          meetup_id int NOT NULL,
-          user_id int NOT NULL,
+          meetup_id INT NOT NULL REFERENCES meetups(id) ON DELETE CASCADE ON UPDATE CASCADE,
+          user_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE,
           response VARCHAR(128) NOT NULL
         )`;
         this.pool.query(rsvp)
+        .then((response) => {
+            console.log(response);
+        })
+        .catch((err) => {
+            console.log(err.message);
+        });
+        const comment = `
+        CREATE TABLE IF NOT EXISTS
+        question_comments(
+          id serial NOT NULL PRIMARY KEY,
+          question_id INT NOT NULL REFERENCES questions(id) ON DELETE CASCADE ON UPDATE CASCADE,
+          user_id int NOT NULL,
+          comment VARCHAR(128) NOT NULL,
+          date_commented DATE NOT NULL
+        )`;
+        this.pool.query(comment)
         .then((response) => {
             console.log(response);
         })

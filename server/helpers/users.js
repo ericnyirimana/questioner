@@ -1,4 +1,5 @@
 import Joi from 'joi';
+import jwt from 'jsonwebtoken';
 
 function validateUser(user) {
     const schema = {
@@ -14,5 +15,18 @@ function validateUser(user) {
     };
     return Joi.validate(user, schema);
 }
+function validateLogin(user) {
+    const schema = {
+        email: Joi.string().email({ minDomainAtoms: 2 }).required(),
+        password: Joi.string().min(8).required()
+    };
+    return Joi.validate(user, schema);
+}
 
-export default validateUser;
+function generateToken(data) {
+    const token = jwt.sign(data,
+      process.env.SECRET, { expiresIn: '7d' });
+    return token;
+  }
+
+export { validateUser, validateLogin, generateToken };
